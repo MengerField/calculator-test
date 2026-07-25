@@ -1,6 +1,7 @@
-#   GNU nano 7.2                      calculator.py  
-print("Option A to addition of 2 numbers")
+#   GNU nano 7.2                      calculator.py
+print("Option A to addition or substrac")
 print("Option B to raise to power")
+print("Option C to multiply")
 
 option=(input("Choose an option: "))
 if option.lower()=="a":
@@ -16,6 +17,20 @@ if option.lower()=="a":
         else:
                 res = num1-num2
                 print(res)
+
+elif option.lower()=="c":
+        print("Input 2 numbers")
+        fnum=float(input("first digit: "))
+        snum=float(input("second digit: "))
+        mult= fnum*snum
+        print(mult)
+
 else:
         print("Raise to power")
         def raise_to_power(base_num, pow_num):
+                result=1
+                for index in range(pow_num):
+                        result = result * base_num
+                return result
+
+        print(raise_to_power(int(input("1num: ")),int(input("2num: "))))
