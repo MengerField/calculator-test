@@ -2,6 +2,7 @@
 print("Option A to addition or substrac")
 print("Option B to raise to power")
 print("Option C to multiply")
+print("Option D to get root square")
 option=(input("Choose an option: "))
 if option.lower()=="a":
         print("Input 2 numbers")
@@ -29,6 +30,13 @@ elif option.lower()=="c":
         else:
                 div = fnum//snum
                 print(div)
+
+elif option.lower()=="d":
+        print("Input 1 number")
+        rnum=(float(input("first digit: ")))
+        op3=rnum**0.5
+        print(op3)
+
 else:
         print("Raise to power")
         def raise_to_power(base_num, pow_num):
