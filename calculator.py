@@ -2,7 +2,10 @@
 #something else
 banana = 0
 while banana == 0 :
-        mango=input("exit to end the program")
+        mango=input("exit to end the program or enter to start: ")
+        if mango.lower() == 'exit' :
+                banana = 1
+                break
         print("Option A to addition or substrac")
         print("Option B to multiply or divide")
         print("Option C to get root square")
@@ -52,5 +55,4 @@ while banana == 0 :
                 print(raise_to_power(int(input("1num: ")),int(input("2num: "))))
         else:
                 print("No valid option, autodestruction in 3...2...1...")
-        if mango.lower() == 'exit' :
-                banana = 1
+        
