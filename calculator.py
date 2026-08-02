@@ -1,5 +1,4 @@
 #   GNU nano 7.2                      calculator.py
-#something else
 banana = 0
 while banana == 0 :
         mango=input("exit to end the program or enter to start: ")
@@ -21,9 +20,11 @@ while banana == 0 :
                 if option2.lower()=="a":
                         sum = num1+num2
                         print(sum)
-                else:
+                elif option2.lower()=="b":
                         res = num1-num2
                         print(res)
+                else:
+                        print("Invalid option, autodestruccion in 3...2...1...")
         elif option.lower()=="b":
                 print("Input 2 numbers")
                 fnum=float(input("first digit: "))
@@ -34,9 +35,11 @@ while banana == 0 :
                 if op3.lower()=="a":
                         mult = fnum*snum
                         print(mult)
-                else:
-                        div = fnum//snum
+                elif op3.lower()=="b":
+                        div = fnum/snum
                         print(div)
+                else:
+                        print("Invalid option, autodestruccion in 3...2...1...")
 
         elif option.lower()=="c":
                 print("Input 1 number")
