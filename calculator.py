@@ -40,8 +40,11 @@ while banana == 0 :
                                 mult = fnum*snum
                                 print(mult)
                         elif op3.lower()=="b":
-                                div = fnum/snum
-                                print(div)
+                                try:
+                                        div = fnum/snum
+                                        print(div)
+                                except ZeroDivisionError:
+                                        print("No mames we no se puede divir por cero")
                         else:
                                 print("Invalid option, autodestruccion in 3...2...1...")
                 except ValueError:
@@ -69,4 +72,3 @@ while banana == 0 :
                         print("Error, no valid number")
         else:
                  print("No valid option, autodestruction in 3...2...1...")
-        
