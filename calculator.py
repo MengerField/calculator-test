@@ -54,8 +54,13 @@ while banana == 0 :
                 try:
                         print("Input 1 number")
                         rnum=(float(input("first digit: ")))
-                        op3=rnum**0.5
-                        print(op3)
+                        if rnum<0:
+                                prnum=abs(rnum)
+                                op3=prnum**0.5
+                                print(f"{op3}j")
+                        else:        
+                                op3=rnum**0.5
+                                print(op3)
                 except ValueError:
                         print("Error, not a valid number")
 
