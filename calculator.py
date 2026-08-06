@@ -3,7 +3,6 @@ banana = 0
 while banana == 0 :
         mango=input("exit to end the program or enter to start: ")
         if mango.lower() == 'exit' :
-                banana = 1
                 break
         print("Option A to addition or substrac")
         print("Option B to multiply or divide")
