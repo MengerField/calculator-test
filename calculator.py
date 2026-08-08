@@ -1,7 +1,7 @@
 #   GNU nano 7.2                      calculator.py
 banana = 0
 while banana == 0 :
-        mango=input("exit to end the program or enter to start: ")
+        mango=input("Press any key to start or exit to leave the program: ")
         if mango.lower() == 'exit' :
                 break
         print("Option A to addition or substrac")
