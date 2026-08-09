@@ -1,8 +1,7 @@
 #   GNU nano 7.2                      calculator.py
-banana = 0
-while banana == 0 :
-        mango=input("Press any key to start or exit to leave the program: ")
-        if mango.lower() == 'exit' :
+while True :
+        CodeGeass=input("Press any key to start or exit to leave the program: ")
+        if CodeGeass.lower() == 'exit' :
                 break
         print("Option A to addition or substrac")
         print("Option B to multiply or divide")
