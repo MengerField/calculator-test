@@ -1,4 +1,17 @@
 #   GNU nano 7.2                      calculator.py
+def raise_to_power(base_num, pow_num):
+        result=1
+        for index in range(pow_num):
+                result = result * base_num
+        return result
+def addition(first_num, second_num):
+    result=first_num+second_num
+    return result
+
+def substrac(first_num, second_num):
+    result=first_num-second_num
+    return result
+
 while True :
         CodeGeass=input("Press any key to start or exit to leave the program: ")
         if CodeGeass.lower() == 'exit' :
@@ -8,20 +21,22 @@ while True :
         print("Option C to get root square")
         print("Option D to raise to power")
         option=(input("Choose an option: "))
+        
         if option.lower()=="a":
                 try:
-                        print("Input 2 numbers")
-                        num1=float(input("first digit: "))
-                        num2=float(input("second digit: "))
                         print("Option A to addition")
                         print("Option B to subtraction")
                         option2=(input("Choose an option: "))
                         if option2.lower()=="a":
-                                add = num1+num2
-                                print(add)
+                                try:
+                                     print(addition(float(input("First number: ")),float(input("Second number: "))))
+                                except ValueError:
+                                        print("Error, not a valid number")
                         elif option2.lower()=="b":
-                                res = num1-num2
-                                print(res)
+                                try:
+                                     print(substrac(float(input("First number: ")),float(input("Second number: "))))
+                                except ValueError:
+                                        print("Error, not a valid number")
                         else:
                                 print("Invalid option, autodestruccion in 3...2...1...")
                 except ValueError:
@@ -65,11 +80,6 @@ while True :
         elif option.lower()=="d":
                 try:
                         print("Raise to power")
-                        def raise_to_power(base_num, pow_num):
-                                result=1
-                                for index in range(pow_num):
-                                        result = result * base_num
-                                return result
                         print(raise_to_power(int(input("1num: ")),int(input("2num: "))))
                 except ValueError:
                         print("Error, no valid number")
