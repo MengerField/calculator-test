@@ -12,7 +12,7 @@ def substrac(first_num, second_num):
     result=first_num-second_num
     return result
 def multiplication(first_num, second_num):
-        result=first_num**secon_num
+        result=first_num*second_num
         return result
 def division(first_num, second_num):
         result=first_num/second_num
@@ -49,19 +49,19 @@ while True :
                         print("Error, not a valid number")
         elif option.lower()=="b":
                 try:
-                        print("Input 2 numbers")
-                        fnum=float(input("first digit: "))
-                        snum=float(input("second digit: "))
                         print("Option A to multiply")
                         print("Option B to divide")
                         op3=(input("Choose an option: "))
                         if op3.lower()=="a":
-                                mult = fnum*snum
-                                print(mult)
+                                try:
+                                     print(multiplication(float(input("First number: ")),float(input("Second number: "))))
+                                except ValueError:
+                                        print("Error, not a valid number")
                         elif op3.lower()=="b":
                                 try:
-                                        div = fnum/snum
-                                        print(div)
+                                     print(division(float(input("First number: ")),float(input("Second number: "))))
+                                except ValueError:
+                                        print("Error, not a valid number")
                                 except ZeroDivisionError:
                                         print("No mames we no se puede divir por cero")
                         else:
