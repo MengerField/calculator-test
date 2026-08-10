@@ -11,6 +11,12 @@ def addition(first_num, second_num):
 def substrac(first_num, second_num):
     result=first_num-second_num
     return result
+def multiplication(first_num, second_num):
+        result=first_num**secon_num
+        return result
+def division(first_num, second_num):
+        result=first_num/second_num
+        return result
 
 while True :
         CodeGeass=input("Press any key to start or exit to leave the program: ")
