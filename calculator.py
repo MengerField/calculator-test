@@ -1,26 +1,34 @@
 #   GNU nano 7.2                      calculator.py
 def raise_to_power(base_num, pow_num):
-        result=1
-        for index in range(pow_num):
-                result = result * base_num
-        return result
+	result = 1
+    for index in range(pow_num):
+		result = result * base_num
+    return result
+
+
 def addition(first_num, second_num):
-    result=first_num+second_num
+    result = first_num + second_num
     return result
 
-def substrac(first_num, second_num):
-    result=first_num-second_num
+
+def substraction(first_num, second_num):
+    result = first_num - second_num
     return result
+
+
 def multiplication(first_num, second_num):
-        result=first_num*second_num
-        return result
-def division(first_num, second_num):
-        result=first_num/second_num
-        return result
+    result = first_num * second_num
+    return result
 
-while True :
-        CodeGeass=input("Press any key to start or exit to leave the program: ")
-        if CodeGeass.lower() == 'exit' :
+
+def division(first_num, second_num):
+    result = first_num / second_num
+    return result
+        
+
+while True:
+		start_option = input("Press any key to start or exit to leave the program: ")
+        if start_option.lower() == 'exit':
                 break
         print("Option A to addition or substrac")
         print("Option B to multiply or divide")
