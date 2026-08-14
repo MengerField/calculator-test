@@ -1,101 +1,128 @@
-#   GNU nano 7.2                      calculator.py
+#Simple calculator
+#menger_2026
+
+
 def raise_to_power(base_num, pow_num):
-	result = 1
-    for index in range(pow_num):
-		result = result * base_num
+    result = 1
+    for _ in range(pow_num):
+        result = result * base_num
     return result
 
 
 def addition(first_num, second_num):
-    result = first_num + second_num
-    return result
+    return first_num + second_num
 
 
-def substraction(first_num, second_num):
-    result = first_num - second_num
-    return result
+def subtraction(first_num, second_num):
+    return first_num - second_num
 
 
 def multiplication(first_num, second_num):
-    result = first_num * second_num
-    return result
+    return first_num * second_num
 
 
 def division(first_num, second_num):
-    result = first_num / second_num
-    return result
-        
+    return first_num / second_num
 
-while True:
-		start_option = input("Press any key to start or exit to leave the program: ")
-        if start_option.lower() == 'exit':
-                break
-        print("Option A to addition or substrac")
+
+def main():
+    while True:
+        print("Option A to addition or subtract")
         print("Option B to multiply or divide")
-        print("Option C to get root square")
+        print("Option C to get square root")
         print("Option D to raise to power")
-        option=(input("Choose an option: "))
+        print("Type 'exit' to leave the program")
+        option = input("Choose an option: ")
+
+        if option.lower() == 'exit':
+            break
         
-        if option.lower()=="a":
-                try:
-                        print("Option A to addition")
-                        print("Option B to subtraction")
-                        option2=(input("Choose an option: "))
-                        if option2.lower()=="a":
-                                try:
-                                     print(addition(float(input("First number: ")),float(input("Second number: "))))
-                                except ValueError:
-                                        print("Error, not a valid number")
-                        elif option2.lower()=="b":
-                                try:
-                                     print(substrac(float(input("First number: ")),float(input("Second number: "))))
-                                except ValueError:
-                                        print("Error, not a valid number")
-                        else:
-                                print("Invalid option, autodestruccion in 3...2...1...")
-                except ValueError:
-                        print("Error, not a valid number")
-        elif option.lower()=="b":
-                try:
-                        print("Option A to multiply")
-                        print("Option B to divide")
-                        op3=(input("Choose an option: "))
-                        if op3.lower()=="a":
-                                try:
-                                     print(multiplication(float(input("First number: ")),float(input("Second number: "))))
-                                except ValueError:
-                                        print("Error, not a valid number")
-                        elif op3.lower()=="b":
-                                try:
-                                     print(division(float(input("First number: ")),float(input("Second number: "))))
-                                except ValueError:
-                                        print("Error, not a valid number")
-                                except ZeroDivisionError:
-                                        print("No mames we no se puede divir por cero")
-                        else:
-                                print("Invalid option, autodestruccion in 3...2...1...")
-                except ValueError:
-                        print("Error not a valid number")
 
-        elif option.lower()=="c":
-                try:
-                        print("Input 1 number")
-                        rnum=(float(input("first digit: ")))
-                        if rnum<0:
-                                prnum=abs(rnum)
-                                op3=prnum**0.5
-                                print(f"{op3}j")
-                        else:        
-                                op3=rnum**0.5
-                                print(op3)
-                except ValueError:
-                        print("Error, not a valid number")
+        elif option.lower() == 'exit':
+            break
 
-        elif option.lower()=="d":
-                try:
-                        print("Raise to power")
-                        print(raise_to_power(int(input("1num: ")),int(input("2num: "))))
-                except ValueError:
-                        print("Error, no valid number")
+
+        elif option.lower() == 'a':
+            print("Option A to addition")
+            print("Option B to subtraction")
+            operation = input ("Choose an option: ")
+            try:
+                if operation.lower() == 'a':
+                    print(
+                        addition(
+                            float(input("First number: ")),
+                            float(input("Second number: "))
+                        )
+                    )
+                elif operation.lower() == 'b':
+                    print(
+                        subtraction(
+                            float(input("First number: ")),
+                            float(input("Second, number: "))
+                        )
+                    )
+                else:
+                    print("Invalid option, try again")
+            except ValueError:
+                print("Error, not a valid number")
+            
+        
+        elif option.lower() == 'b':
+            print("Option A to multiply")
+            print("Option B to divide")
+            operation = input("Choose an option: ")
+            try:
+                if operation.lower() == 'a':
+                    print(
+                        multiplication(
+                            float(input("First number: ")),
+                            float(input("Second number: "))
+                        )
+                    )
+                elif operation.lower() == 'b':
+                    try:
+                        print(
+                            division(
+                                float(input("First number: ")),
+                                float(input("Second number: "))
+                            )
+                        )
+                    except ZeroDivisionError:
+                        print("Can't divide by zero")
+                else:
+                    print("Invalid option, try again")
+            except ValueError:
+                print("Error, not a valid number")
+
+
+        elif option.lower() == 'c':
+            try:
+                print("Input 1 number")
+                number = float(input("First digit: "))
+                if number < 0:
+                    result = abs(number) ** 0.5
+                    print(f"{result}j")
+                else:
+                    result = number ** 0.5
+                    print(result)
+            except ValueError:
+                print("Error, not a valid number")
+
+        elif option.lower() == 'd':
+            try:
+                print(
+                    raise_to_power(
+                        int(input("Base number: ")),
+                        int(input("Exponent: "))
+                    )
+                )
+            except ValueError:
+                print("Error, not a valid number")
+            
+
         else:
-                 print("No valid option, autodestruction in 3...2...1...")
+            print("Not a valid option, try again")
+
+                
+if __name__ == '__main__':
+    main()
