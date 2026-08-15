@@ -2,29 +2,35 @@
 #menger_2026
 
 
+#Función para calcular la potencia de un número
 def raise_to_power(base_num, pow_num):
     result = 1
     for _ in range(pow_num):
         result = result * base_num
-    return result
+    return result 
 
 
+#Función para sumar
 def addition(first_num, second_num):
-    return first_num + second_num
+    return first_num + second_num 
 
 
+#Función para restar
 def subtraction(first_num, second_num):
-    return first_num - second_num
+    return first_num - second_num 
 
 
+#Función para multiplicar
 def multiplication(first_num, second_num):
-    return first_num * second_num
+    return first_num * second_num 
 
 
+#Función para dividir
 def division(first_num, second_num):
-    return first_num / second_num
+    return first_num / second_num 
 
 
+#Función main de la calculadora
 def main():
     while True:
         print("Option A to addition or subtract")
