@@ -32,6 +32,7 @@ def division(first_num, second_num):
 
 #Función main de la calculadora
 def main():
+    #Menú con opciones
     while True:
         print("Option A to addition or subtract")
         print("Option B to multiply or divide")
@@ -39,7 +40,8 @@ def main():
         print("Option D to raise to power")
         print("Type 'exit' to leave the program")
         option = input("Choose an option: ")
-
+        
+        #Funcion para salir del programa
         if option.lower() == 'exit':
             break
         
@@ -48,11 +50,13 @@ def main():
             break
 
 
+        #Menú para seleccionar sumar o restar
         elif option.lower() == 'a':
             print("Option A to addition")
             print("Option B to subtraction")
             operation = input ("Choose an option: ")
             try:
+                #Llamada a la funcion de suma e input de numeros
                 if operation.lower() == 'a':
                     print(
                         addition(
@@ -60,6 +64,7 @@ def main():
                             float(input("Second number: "))
                         )
                     )
+                #Llamada a la función de resta e input de numeros
                 elif operation.lower() == 'b':
                     print(
                         subtraction(
@@ -67,6 +72,7 @@ def main():
                             float(input("Second, number: "))
                         )
                     )
+                #Manejor de errores
                 else:
                     print("Invalid option, try again")
             except ValueError:
