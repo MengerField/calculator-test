@@ -78,7 +78,8 @@ def main():
             except ValueError:
                 print("Error, not a valid number")
             
-        
+
+        #Menú para multiplicar o divir
         elif option.lower() == 'b':
             print("Option A to multiply")
             print("Option B to divide")
